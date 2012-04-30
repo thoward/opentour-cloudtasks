@@ -1,0 +1,33 @@
+<HTML>
+	<head>
+		<link rel="Stylesheet" href="site.css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="knockout.js"></script>
+	</head>
+	<body>
+		<div class="content">
+			<h3>Cloud Tasks</h3>
+			
+			<form data-bind="submit: addTask">
+			    <input data-bind="value: newTaskText" placeholder="What needs to be done?" />
+			    <button type="submit">+</button>
+			</form>
+
+			<ul data-bind="foreach: tasks, visible: tasks().length > 0">
+			    <li>
+			        <input type="checkbox" data-bind="checked: isDone" />
+			        <input data-bind="value: title, disable: isDone" />
+			        <!--<a href="#" data-bind="click: $parent.removeTask">Delete</a>-->
+			        <button data-bind="click: $parent.removeTask">x</button>
+			    </li> 
+			</ul>
+
+			<div class="notify">
+				You have <b data-bind="text: incompleteTasks().length">&nbsp;</b> incomplete task(s)
+				<span data-bind="visible: incompleteTasks().length == 0"> - it's beer time!</span>
+			</div>
+
+			<script type="text/javascript" src="tasks.js"></script>
+		</div>
+	</body>
+</html>

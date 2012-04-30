@@ -1,0 +1,87 @@
+body { 
+    font-family: Helvetica, Arial;
+}
+
+div.content {
+    width: 60%;
+    margin: auto;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    background-color: #FFFFA2;
+    height: auto;
+    border-radius: 0.5em;
+    min-width: 45em;
+}
+
+input:not([type]), 
+input[type=text], 
+input[type=password], 
+select  { 
+    background-color: #FFFFCC; 
+    border: 1px solid gray; 
+    padding: .25em;
+}
+
+
+ul { 
+    list-style-type: none; 
+    margin: 1em 1em; 
+    padding: 1em; 
+    border-radius: 0.5em;  
+}
+
+ul li a { 
+    color: gray; 
+    font-size: 90%; 
+    text-decoration: none 
+}
+
+ul li a:hover { 
+    text-decoration: underline 
+}
+
+input:not([type]), 
+input[type=text],
+button { 
+    font-size: 1.125em;
+    height: 1.5em; 
+}
+
+button { 
+    width: 2em;
+}
+
+input:not([type]), 
+input[type=text] {
+    width: 30em;
+    border: solid 1px #ececec;
+}
+
+input[disabled] { 
+    text-decoration: line-through; 
+    border-color: silver; 
+    background-color: silver; 
+}
+
+div.notify {
+    margin: 1em 5em;
+    font-size: .75em;
+    font-style: italic;
+    width: 30em;
+}
+
+textarea { 
+    width: 30em;
+}
+
+form { 
+    margin: 1em 3.5em; 
+}
+
+h3 {
+    padding: 1em 3.5em;
+    border-bottom: solid 1px;
+    background-color: ffdc73;
+    border-radius: 0.5em;
+    font-weight: bold;
+}
