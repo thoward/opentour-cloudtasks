@@ -9,7 +9,7 @@ app.configure(function(){
 
 app.get('/', function(req, res) {
 
-	if (!("userid" in req.cookies)) {        
+	if (req.cookies.userid === undefined) {        
         // no existing cookie, so create one
 		var newId = uuid.v4();
 		req.cookies['userid'] = newId;
