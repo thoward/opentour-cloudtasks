@@ -38,7 +38,7 @@ app.post("/tasks/:userid", function(req, res) {
 	console.log("[POST] userid: " + userid);
 	console.log("[POST] data: " + JSON.stringify(req.body, null, 4));
 
-	if(userid in tasks) {
+	if(tasks[userid] !== undefined) {
 		// update tasks
 		tasks[userid] = (req.body["tasks"] || []).filter(retainedTasks);
 	}
